@@ -1,0 +1,25 @@
+{% load static %}
+<html>
+<head>
+<title>REGISTER</title>
+<link rel="stylesheet" href="{% static 'signin.css' %}" />
+<body>
+<div class="container">
+<div class="card">
+<form method="post" action="send_details/">
+    {% csrf_token %}
+
+<h3 style="margin: 7 px;">EZ-Carservice</h3>
+<input type="text" name="name" placeholder="Enter name" class="finput" id="fname"/></br>
+<input type="email" name="email" placeholder="Enter email" class="finput" id="email"/></br>
+<textarea rows="5" name="address" columns="10" class="finput" placeholder="Enter Address" id="address"></textarea></br>
+<input type="text" name="carmodel" class="finput" placeholder="Car model" class="finput" id="carmodel"/></br>
+<input type="text" name="timeslot" placeholder="Enter timeslot" class="finput" id="timeslot"/></br>
+
+<button class="btn" type="submit" style="margin:7 px;">Register</button></br>
+</form>
+</div>
+</div>
+</body>
+</head>
+</html>
